@@ -1,2 +1,5 @@
-# Lista-Ponteiros-DCA1202
-Primeira lista de exercícios da disciplina DCA1202
+Aluna: Júlia Maria Xaxá Melo Duarte
+Matrícula: 20220014978
+
+Professor: Agostinho Brito
+Disciplina: DCA1202 (Programação Avançada)
