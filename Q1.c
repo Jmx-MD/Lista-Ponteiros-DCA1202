@@ -5,9 +5,14 @@ int main(void){
   int *p, *q;
   p = &i;
   q = &j;
+  bol = false;
   
   //p == &i;
-  printf(p);
+  if(p==&i){
+    bol = true;
+  }
+  printf(bol);
+  //
     
   //*p - *q;
   a = *p - *q;
