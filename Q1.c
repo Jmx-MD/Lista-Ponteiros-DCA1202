@@ -17,7 +17,7 @@ int main(void){
   //*p - *q;
   a = *p - *q;
   printf(a);
-  //**Imprime o resultado da diferença do endereços contido em p e q, pois as variáves em si (ponteiros) não contém os conteúdos de i e j (números inteiro).
+  //Imprime o resultado da diferença do endereços contido em p e q, pois as variáves em si (ponteiros) não contém os conteúdos de i e j (números inteiro).
   
   //**&p;
   b = **&p;
@@ -27,9 +27,8 @@ int main(void){
   //3 - *p/(*q) + 7;
   c = 3 - *p/(*q) + 7;
   printf(c);
-  //**Imprime o resultado da equação, sendo *p e *q os endereços d i e j, pois aqui se acessa as variáveis p e q em si, e não o conteúdo das variáveis às quais apontam.
+  //Imprime o resultado da equação, sendo *p e *q os endereços d i e j, pois aqui se acessa as variáveis p e q em si, e não o conteúdo das variáveis às quais apontam.
 
-  //** = rever
 
   
 
