@@ -11,4 +11,7 @@ main(){
   printf("%d", s->x);
   printf("%s", s->name);
 }
+
+Será impressa uma série de erros.
+
 */
