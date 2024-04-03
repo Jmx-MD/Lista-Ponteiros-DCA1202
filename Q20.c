@@ -9,4 +9,26 @@ Exemplo: para multiplicar duas matrizes (A e B) de dimensões 2x3 e 3x4, respect
 resultado deve ficar armazenado em C).
 multiplica_matrizes(A, B, C, 2, 3, 4);
 
+- 3 ponteiros (p/ A B e C)
+- ma,na,nb
+- Anxm , Bmxn
+- AB = C
 */
+
+#include <stdio.h>
+
+int mult_mat(pa,pb,pc,m,na,nb){
+    scanf("%p %p %p",&pa,&pb,&pc);
+    scanf(" %i %i %i",&m,&na,&nb);
+    
+    printf("%p %p %p %i %i %i",pa,pb,pc,m,na,nb);
+    
+    return 0;
+}
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
