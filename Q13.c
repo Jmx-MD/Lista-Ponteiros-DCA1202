@@ -33,3 +33,11 @@ int main()
 }
 
 //exemplo 3
+#include <stdlib.h>
+
+int main() {
+     int *ptr = (int *)malloc(sizeof(int));
+     int a;
+     ptr = &a; 
+     return 0;
+ }
