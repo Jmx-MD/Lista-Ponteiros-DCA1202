@@ -16,19 +16,73 @@ multiplica_matrizes(A, B, C, 2, 3, 4);
 */
 
 #include <stdio.h>
+#include <malloc.h>
 
-int mult_mat(pa,pb,pc,m,na,nb){
-    scanf("%p %p %p",&pa,&pb,&pc);
-    scanf(" %i %i %i",&m,&na,&nb);
+int **multmat(int m,int na,int nb,int **a,int **b, int **c){
+    int i,j;//contadores linhas e colunas
+
+    for(i=0;i<m;i++){
+        for(j=0;j<m;i++){
+            c[i][j] = a[i][j]*b[j][i]; //multiplica itens da linha de a pelos da coluna de b
+        }
+        
+    }
     
-    printf("%p %p %p %i %i %i",pa,pb,pc,m,na,nb);
-    
-    return 0;
+
+    return c;
 }
 
-int main()
+  int main()
 {
-    printf("Hello World");
-
-    return 0;
+    int m,na,nb;//dimensões das matrizes (visto que o mesmo valor se repete, foi criada apenas uma variável)
+    int la,lb,lc; //linhas das matrizes
+    la,lc = m;
+    lb = nb;
+    int ca,cb,cc; //colunas das matrizes
+    ca,cc = na;
+    cb =m;
+    int i,j; //outros contadores
+    int **x; //matriz vaga para uso da função
+   
+    //alocação de memória
+    int **a = (int **)malloc(la * sizeof(int *));//aloca espaço para as linhas
+    int **b = (int **)malloc(lb * sizeof(int *));
+    int **c = (int **)malloc(lc * sizeof(int *));
+    
+    for (int i = 0; i < la; i++) {
+        a[i] = (int *)malloc(ca * sizeof(int));//aloca espaço para os itens de cada coluna
+    }
+    for (int i = 0; i < la; i++) {
+        b[i] = (int *)malloc(cb * sizeof(int));
+    }
+    for (int i = 0; i < la; i++) {
+        c[i] = (int *)malloc(cc * sizeof(int));
+    }
+    
+    //definição de matrizes
+    
+    scanf("%i\n%i\n%i",&m,&na,&nb);
+    
+    //matriz a
+    for(i=0;i<la;i++){
+        for(j=0;j<ca;j++){
+            scanf("%i",&a[i][j]);
+            printf("\n%i",a[i][j]);
+        }
+    }
+    
+    
+    //multiplicação de matrizes
+    c = multmat(m,na,nb,a,b,x);
+    
+    for(i=0;i<m;i++){
+        for(j=0;j<m;j++){
+            printf("%i ",c[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("%p",c);
+    
+  return 0;
 }
