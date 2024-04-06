@@ -12,33 +12,32 @@ float ordem(int n)//função que recebe e ordena floats
     
     for(i=0;i<n;i++){
         scanf("%f",&l[i]);
-        printf("%f\n",l[i]);
     }
     
     
     for(i=0;i<n;i++){
-        if(l[i]>l[i+1]){
-            *temp = l[i+1];
-            l[i+1] = l[i];
-            l[i] = *temp;
+        if(l[i]>l[i+1]){ //se o item anterior for maior que o posterior, eles trocam de posição
+            *temp = l[i+1]; //item menor é posto em um ponteiro
+            l[i+1] = l[i]; //a posição do item menor recebe o item maior
+            l[i] = *temp; //a posição do item maior recebe o item menor
         }
     }
     for(i=0;i<n;i++){
-        printf("%f ",l[i]);
+        printf("%f ",l[i]); //imprime a lista final, em ordem
     }
     
-    return *ptr;
+    return *ptr; //retorna o ponteiro para a função
 
 }
 
 int main()
 {
     int x;
-    scanf("%i",&x);
+    scanf("%i",&x); //pede um número (tamanho da lista)
     
-    float (*ptrl)(int) = &ordem;
+    float (*ptrl)(int) = &ordem; //ponteiro para a função ordem
     
-    ptrl(x);
+    ptrl(x); //executa a função
     
     return 0;
 }
