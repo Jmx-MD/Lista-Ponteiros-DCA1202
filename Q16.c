@@ -2,19 +2,19 @@
 Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu
 código, explicando o que faz cada uma das linhas.
 */
-#include <stdio.h>
-#include <malloc.h>
+#include <stdio.h> //inclui biblioteca padrão
+#include <stdlib.h> // inclui biblioteca padrão q contém a função qsort()
 float ordem(int n)//função que recebe e ordena floats
 {
     int i,*temp; //contador e ponteiro para mudança de posições na lista
     float l[n],*ptr; //lista e ponteiro da lista
     
-    for(i=0;i<n;i++){
+    for(i=0;i<n;i++){ //recebe valores contidos na lista
         scanf("%f",&l[i]);
     }
     
     
-    for(i=0;i<n;i++){
+    for(i=0;i<n;i++){//analisa valores da lista completa
 
     if (l[i] < l[i+1]) //se o número anteriormente for menor
     {
