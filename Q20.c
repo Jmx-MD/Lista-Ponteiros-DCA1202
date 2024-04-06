@@ -71,6 +71,14 @@ int **multmat(int m,int na,int nb,int **a,int **b, int **c){
         }
     }
     
+    //matriz b
+    for(i=0;i<lb;i++){
+        for(j=0;j<cb;j++){
+            scanf("%i",&b[i][j]);
+            printf("\n%i",b[i][j]);
+        }
+    }
+    
     
     //multiplicação de matrizes
     c = multmat(m,na,nb,a,b,x);
@@ -83,6 +91,26 @@ int **multmat(int m,int na,int nb,int **a,int **b, int **c){
     }
     
     printf("%p",c);
+    
+    
+    //liberação de memória após uso
+    for (int i = 0; i < la; i++) {
+        free(a[i]);
+  }
+    free(a);
+    a = NULL;
+
+    for (int i = 0; i < lb; i++) {
+        free(b[i]);
+  }
+    free(b);
+    b = NULL;
+
+    for (int i = 0; i<lc; i++) {
+        free(c[i]);
+  }
+    free(c);
+    c = NULL;
     
   return 0;
 }
