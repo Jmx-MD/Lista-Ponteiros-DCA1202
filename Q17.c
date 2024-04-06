@@ -6,7 +6,7 @@ que determinará como os elementos do array serão ordenados.
 */
 #include <stdio.h>
 #include <stdlib.h>
-float ordem_i(int n)//função que recebe e ordena inteiros
+int ordem_i(int n)//função que recebe e ordena inteiros
 {
     int i,*temp; //contador e ponteiro para mudança de posições na lista
     int l[n],*ptr; //lista e ponteiro da lista
