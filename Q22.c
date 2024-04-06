@@ -30,6 +30,8 @@ será, exatamente, o valor da saída do programa?
 
 A saída será "15 13 0".
 */
+
+
 //Programa alterado para teste:
 
 #include <stdio.h>
@@ -58,7 +60,7 @@ int main(){
   
   }
  
-  printf ("\n%d %d %d\n", x, y, z);
+  printf ("\n%d %d %d\n", x, y, z);//imprime "15 13 0"
   return 0;
 }
 
