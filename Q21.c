@@ -6,6 +6,7 @@ operação, não é liberada quando se torna desnecessária. Na linguagem C, ess
 programação pode levar a falhas no sistema se a memória for completamente consumida. Um
 dos trechos abaixo apresenta um vazamento de memória. Identifique-o e justifique sua
 resposta.
+
 A void f( ){
   void *s;
   s = malloc(50);
@@ -43,4 +44,8 @@ E void f(int n){
   free(m);
   free(n);
 }
+
+
+A alternativa D. Pois não foi liberado o espaço utilizado após terminar o programa, apenas a alocou.
+
 */
