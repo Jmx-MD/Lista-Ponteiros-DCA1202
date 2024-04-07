@@ -35,9 +35,11 @@ int main()
     int x;
     scanf("%i",&x); //pede um número (tamanho da lista)
     
-    float (*ptrl)(int) = &ordem; //ponteiro para a função ordem
+    float (*ptrl)(int) = malloc(x*sizeof(int));
+    ptrl = &ordem; //ponteiro para a função ordem
     
     ptrl(x); //executa a função
-    
+
+    free(ptrl);
     return 0;
 }
