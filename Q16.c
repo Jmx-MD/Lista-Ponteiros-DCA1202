@@ -49,7 +49,8 @@ int main()
     for(i=0;i<x;i++){
         printf("%p ",l[i]); //imprime itens da lista final
     }
-    
+
+    free(l[x]);
     
     return 0;
 }
